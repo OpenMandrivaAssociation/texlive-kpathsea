@@ -15,8 +15,8 @@ Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/kpathsea.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/kpathsea.doc.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
-Requires(post):	texlive-tlpkg
-Requires:	texlive-kpathsea.bin
+Requires(pre):	texlive-tlpkg
+Requires(post):	texlive-kpathsea.bin
 Provides:	kpathsea = %{version}
 Obsoletes:	kpathsea-devel <= 20100722
 Conflicts:	kpathsea-devel <= 20100722
@@ -34,10 +34,12 @@ separately, but rather is released and maintained as part of
 the TeX-live sources.
 
 %pre
+    %_texmf_updmap_pre
     %_texmf_mktexlsr_pre
 
 %post
     %_texmf_mktexlsr_post
+    %_texmf_updmap_pre
 
 %preun
     if [ $1 -eq 0 ]; then
@@ -137,23 +139,6 @@ perl -pi -e 's%^(TEXMFMAIN\s+= ).*%$1%{_texmfdir}%;'			  \
 	 -e 's%^(TEXMFCONFIG\s+= ).*%$1\$HOME/.texlive2011/texmf-config%;'\
 	 -e 's%^(OSFONTDIR\s+= ).*%$1%{_datadir}/fonts%;'		  \
 	texmf/web2c/texmf.cnf
-
-perl -pi -e 's%^(\s*TEXMFMAIN\s+=\s+").*%$1%{_texmfdir}",%;'				\
-	 -e 's%\bTEXMFCONTEXT\b%TEXMFDIST%g;'						\
-	 -e 's%^(\s*TEXMFDIST\s+=\s+).*%$1"%{_texmfdistdir}",%;'			\
-	 -e 's%^(\s*TEXMFLOCAL\s+=\s+).*%$1"%{_texmflocaldir}",%;'			\
-	 -e 's%^(\s*TEXMFSYSVAR\s+=\s+).*%$1"%{_texmfvardir}",%;'			\
-	 -e 's%^(\s*TEXMFSYSCONFIG\s+=\s+).*%$1"%{_texmfconfdir}",%;'			\
-	 -e 's%^(\s*TEXMFHOME\s+=\s+").*%$1\$HOME/texmf",%;'				\
-	 -e 's%^(\s*TEXMFVAR\s+=\s+").*%$1\$HOME/.texlive2011/texmf-var",%;'		\
-	 -e 's%^(\s*TEXMFCONFIG\s+=\s+").*%$1\$HOME/.texlive2011/texmf-config",%;'	\
-	 -e 's%^(\s*FONTCONFIG_PATH\s+=\s+").*%$1%{_sysconfdir}/fonts",%;'		\
-	 -e 's|^local texmflocal.*$||;'							\
-	 -e 's|^texmflocal.*$||;'							\
-	texmf/web2c/texmfcnf.lua
-
-perl -pi -e 's%^# (viewer_pdf = )xpdf.*%$1xdg-open%;'	\
-	texmf-dist/texdoc/texdoc.cnf
 
 %build
 
