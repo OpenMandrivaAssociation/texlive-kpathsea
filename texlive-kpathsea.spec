@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-kpathsea
 Version:	20100503
-Release:	1
+Release:	2
 Summary:	Path searching library for TeX-related files
 Group:		Publishing
 URL:		http://tug.org/texlive
@@ -17,11 +17,7 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea.bin
-Provides:	kpathsea = %{version}
-Obsoletes:	kpathsea-devel <= 20100722
-Conflicts:	kpathsea-devel <= 20100722
-Obsoletes:	kpathsea-static-devel <= 20100722
-Conflicts:	kpathsea-static-devel <= 20100722
+%rename kpathsea
 Conflicts:	texlive-texmf <= 20110705-3
 Conflicts:	texlive-doc <= 20110705-3
 
