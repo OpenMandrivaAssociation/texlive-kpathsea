@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-kpathsea
 Version:	20100503
-Release:	2
+Release:	3
 Summary:	Path searching library for TeX-related files
 Group:		Publishing
 URL:		http://tug.org/texlive
@@ -17,9 +17,11 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea.bin
+Requires(preun):texlive-kpathsea.bin
+Requires(postun):texlive-kpathsea.bin
 %rename kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
+Conflicts:	texlive-texmf < 20110705-4
+Conflicts:	texlive-doc < 20110705-4
 
 %description
 Kpathsea is a library and utility programs which provide path
