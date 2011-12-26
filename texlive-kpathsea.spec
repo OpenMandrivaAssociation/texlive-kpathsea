@@ -1,4 +1,4 @@
-# revision 24417
+# revision 24904
 # category TLCore
 # catalog-ctan undef
 # catalog-date 2010-05-03 20:19:11 +0200
@@ -20,8 +20,6 @@ Requires(post):	texlive-kpathsea.bin
 Requires(preun):texlive-kpathsea.bin
 Requires(postun):texlive-kpathsea.bin
 %rename kpathsea
-Conflicts:	texlive-texmf < 20110705-4
-Conflicts:	texlive-doc < 20110705-4
 
 %description
 Kpathsea is a library and utility programs which provide path
@@ -32,21 +30,19 @@ separately, but rather is released and maintained as part of
 the TeX-live sources.
 
 %pre
-    %_texmf_updmap_pre
-    %_texmf_mktexlsr_pre
+    %{_sbindir}/texlive.post
 
 %post
-    %_texmf_mktexlsr_post
-    %_texmf_updmap_pre
+    %{_sbindir}/texlive.post
 
 %preun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
+	%{_sbindir}/texlive.post
     fi
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
