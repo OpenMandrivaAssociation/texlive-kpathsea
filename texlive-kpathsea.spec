@@ -1,4 +1,4 @@
-# revision 24904
+# revision 25332
 # category TLCore
 # catalog-ctan undef
 # catalog-date 2010-05-03 20:19:11 +0200
@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-kpathsea
 Version:	20100503
-Release:	5
+Release:	6
 Summary:	Path searching library for TeX-related files
 Group:		Publishing
 URL:		http://tug.org/texlive
@@ -17,7 +17,6 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea.bin
-Requires(preun):texlive-kpathsea.bin
 Requires(postun):texlive-kpathsea.bin
 %rename kpathsea
 
