@@ -1,12 +1,12 @@
-# revision 25332
+# revision 25867
 # category TLCore
 # catalog-ctan undef
-# catalog-date 2010-05-03 20:19:11 +0200
+# catalog-date 2012-03-14 12:38:42 +0100
 # catalog-license lgpl
 # catalog-version undef
 Name:		texlive-kpathsea
-Version:	20100503
-Release:	6
+Version:	20120314
+Release:	1
 Summary:	Path searching library for TeX-related files
 Group:		Publishing
 URL:		http://tug.org/texlive
@@ -26,7 +26,7 @@ searching facilities for TeX file types, including the self-
 locating feature required for movable installations, layered on
 top of a general search mechanism. It is not distributed
 separately, but rather is released and maintained as part of
-the TeX-live sources.
+the TeX live sources.
 
 %post
     %{_sbindir}/texlive.post
