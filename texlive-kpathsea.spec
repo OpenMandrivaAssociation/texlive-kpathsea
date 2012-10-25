@@ -1,4 +1,4 @@
-# revision 26691
+# revision 27341
 # category TLCore
 # catalog-ctan undef
 # catalog-date 2012-03-14 12:38:42 +0100
@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-kpathsea
 Version:	20120314
-Release:	3
+Release:	4
 Summary:	Path searching library for TeX-related files
 Group:		Publishing
 URL:		http://tug.org/texlive
@@ -76,20 +76,12 @@ the TeX live sources.
 %doc %{_texmfdir}/doc/kpathsea/kpathsea.pdf
 %doc %{_mandir}/man1/kpseaccess.1*
 %doc %{_texmfdir}/doc/man/man1/kpseaccess.man1.pdf
-%doc %{_mandir}/man1/kpsepath.1*
-%doc %{_texmfdir}/doc/man/man1/kpsepath.man1.pdf
 %doc %{_mandir}/man1/kpsereadlink.1*
 %doc %{_texmfdir}/doc/man/man1/kpsereadlink.man1.pdf
 %doc %{_mandir}/man1/kpsestat.1*
 %doc %{_texmfdir}/doc/man/man1/kpsestat.man1.pdf
-%doc %{_mandir}/man1/kpsetool.1*
-%doc %{_texmfdir}/doc/man/man1/kpsetool.man1.pdf
-%doc %{_mandir}/man1/kpsewhere.1*
-%doc %{_texmfdir}/doc/man/man1/kpsewhere.man1.pdf
 %doc %{_mandir}/man1/kpsewhich.1*
 %doc %{_texmfdir}/doc/man/man1/kpsewhich.man1.pdf
-%doc %{_mandir}/man1/kpsexpand.1*
-%doc %{_texmfdir}/doc/man/man1/kpsexpand.man1.pdf
 %doc %{_mandir}/man1/mkocp.1*
 %doc %{_texmfdir}/doc/man/man1/mkocp.man1.pdf
 %doc %{_mandir}/man1/mkofm.1*
