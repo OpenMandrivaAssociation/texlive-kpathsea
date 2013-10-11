@@ -1,4 +1,4 @@
-# revision 26691
+# revision 30947
 # category TLCore
 # catalog-ctan undef
 # catalog-date 2012-03-14 12:38:42 +0100
@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-kpathsea
 Version:	20120314
-Release:	3
+Release:	4
 Summary:	Path searching library for TeX-related files
 Group:		Publishing
 URL:		http://tug.org/texlive
@@ -38,76 +38,68 @@ the TeX live sources.
 
 #-----------------------------------------------------------------------
 %files
-%{_texmfdir}/web2c/amiga-pl.tcx
-%{_texmfdir}/web2c/cp1250cs.tcx
-%{_texmfdir}/web2c/cp1250pl.tcx
-%{_texmfdir}/web2c/cp1250t1.tcx
-%{_texmfdir}/web2c/cp227.tcx
-%{_texmfdir}/web2c/cp852-cs.tcx
-%{_texmfdir}/web2c/cp852-pl.tcx
-%{_texmfdir}/web2c/cp8bit.tcx
-%{_texmfdir}/web2c/empty.tcx
-%config(noreplace) %{_texmfdir}/web2c/fmtutil.cnf
-%{_texmfdir}/web2c/il1-t1.tcx
-%{_texmfdir}/web2c/il2-cs.tcx
-%{_texmfdir}/web2c/il2-pl.tcx
-%{_texmfdir}/web2c/il2-t1.tcx
-%{_texmfdir}/web2c/kam-cs.tcx
-%{_texmfdir}/web2c/kam-t1.tcx
-%{_texmfdir}/web2c/macce-pl.tcx
-%{_texmfdir}/web2c/macce-t1.tcx
-%{_texmfdir}/web2c/maz-pl.tcx
-%{_texmfdir}/web2c/mktex.cnf
-%{_texmfdir}/web2c/mktex.opt
-%{_texmfdir}/web2c/mktexdir
-%{_texmfdir}/web2c/mktexdir.opt
-%{_texmfdir}/web2c/mktexnam
-%{_texmfdir}/web2c/mktexnam.opt
-%{_texmfdir}/web2c/mktexupd
-%{_texmfdir}/web2c/natural.tcx
-%{_texmfdir}/web2c/tcvn-t5.tcx
-%{_texmfdir}/web2c/texmf.cnf
-%{_texmfdir}/web2c/viscii-t5.tcx
-%doc %{_texmfdir}/doc/info/dir
+%{_texmfdistdir}/web2c/amiga-pl.tcx
+%{_texmfdistdir}/web2c/cp1250cs.tcx
+%{_texmfdistdir}/web2c/cp1250pl.tcx
+%{_texmfdistdir}/web2c/cp1250t1.tcx
+%{_texmfdistdir}/web2c/cp227.tcx
+%{_texmfdistdir}/web2c/cp852-cs.tcx
+%{_texmfdistdir}/web2c/cp852-pl.tcx
+%{_texmfdistdir}/web2c/cp8bit.tcx
+%{_texmfdistdir}/web2c/empty.tcx
+%config(noreplace) %{_texmfdistdir}/web2c/fmtutil.cnf
+%{_texmfdistdir}/web2c/il1-t1.tcx
+%{_texmfdistdir}/web2c/il2-cs.tcx
+%{_texmfdistdir}/web2c/il2-pl.tcx
+%{_texmfdistdir}/web2c/il2-t1.tcx
+%{_texmfdistdir}/web2c/kam-cs.tcx
+%{_texmfdistdir}/web2c/kam-t1.tcx
+%{_texmfdistdir}/web2c/macce-pl.tcx
+%{_texmfdistdir}/web2c/macce-t1.tcx
+%{_texmfdistdir}/web2c/maz-pl.tcx
+%{_texmfdistdir}/web2c/mktex.cnf
+%{_texmfdistdir}/web2c/mktex.opt
+%{_texmfdistdir}/web2c/mktexdir
+%{_texmfdistdir}/web2c/mktexdir.opt
+%{_texmfdistdir}/web2c/mktexnam
+%{_texmfdistdir}/web2c/mktexnam.opt
+%{_texmfdistdir}/web2c/mktexupd
+%{_texmfdistdir}/web2c/natural.tcx
+%{_texmfdistdir}/web2c/tcvn-t5.tcx
+%{_texmfdistdir}/web2c/texmf.cnf
+%{_texmfdistdir}/web2c/viscii-t5.tcx
+%doc %{_texmfdistdir}/doc/info/dir
 %doc %{_infodir}/kpathsea.info*
 %doc %{_infodir}/tds.info*
 %doc %{_infodir}/web2c.info*
-%doc %{_texmfdir}/doc/kpathsea/kpathsea.html
-%doc %{_texmfdir}/doc/kpathsea/kpathsea.pdf
+%doc %{_texmfdistdir}/doc/kpathsea/kpathsea.html
+%doc %{_texmfdistdir}/doc/kpathsea/kpathsea.pdf
 %doc %{_mandir}/man1/kpseaccess.1*
-%doc %{_texmfdir}/doc/man/man1/kpseaccess.man1.pdf
-%doc %{_mandir}/man1/kpsepath.1*
-%doc %{_texmfdir}/doc/man/man1/kpsepath.man1.pdf
+%doc %{_texmfdistdir}/doc/man/man1/kpseaccess.man1.pdf
 %doc %{_mandir}/man1/kpsereadlink.1*
-%doc %{_texmfdir}/doc/man/man1/kpsereadlink.man1.pdf
+%doc %{_texmfdistdir}/doc/man/man1/kpsereadlink.man1.pdf
 %doc %{_mandir}/man1/kpsestat.1*
-%doc %{_texmfdir}/doc/man/man1/kpsestat.man1.pdf
-%doc %{_mandir}/man1/kpsetool.1*
-%doc %{_texmfdir}/doc/man/man1/kpsetool.man1.pdf
-%doc %{_mandir}/man1/kpsewhere.1*
-%doc %{_texmfdir}/doc/man/man1/kpsewhere.man1.pdf
+%doc %{_texmfdistdir}/doc/man/man1/kpsestat.man1.pdf
 %doc %{_mandir}/man1/kpsewhich.1*
-%doc %{_texmfdir}/doc/man/man1/kpsewhich.man1.pdf
-%doc %{_mandir}/man1/kpsexpand.1*
-%doc %{_texmfdir}/doc/man/man1/kpsexpand.man1.pdf
+%doc %{_texmfdistdir}/doc/man/man1/kpsewhich.man1.pdf
 %doc %{_mandir}/man1/mkocp.1*
-%doc %{_texmfdir}/doc/man/man1/mkocp.man1.pdf
+%doc %{_texmfdistdir}/doc/man/man1/mkocp.man1.pdf
 %doc %{_mandir}/man1/mkofm.1*
-%doc %{_texmfdir}/doc/man/man1/mkofm.man1.pdf
+%doc %{_texmfdistdir}/doc/man/man1/mkofm.man1.pdf
 %doc %{_mandir}/man1/mktexfmt.1*
-%doc %{_texmfdir}/doc/man/man1/mktexfmt.man1.pdf
+%doc %{_texmfdistdir}/doc/man/man1/mktexfmt.man1.pdf
 %doc %{_mandir}/man1/mktexlsr.1*
-%doc %{_texmfdir}/doc/man/man1/mktexlsr.man1.pdf
+%doc %{_texmfdistdir}/doc/man/man1/mktexlsr.man1.pdf
 %doc %{_mandir}/man1/mktexmf.1*
-%doc %{_texmfdir}/doc/man/man1/mktexmf.man1.pdf
+%doc %{_texmfdistdir}/doc/man/man1/mktexmf.man1.pdf
 %doc %{_mandir}/man1/mktexpk.1*
-%doc %{_texmfdir}/doc/man/man1/mktexpk.man1.pdf
+%doc %{_texmfdistdir}/doc/man/man1/mktexpk.man1.pdf
 %doc %{_mandir}/man1/mktextfm.1*
-%doc %{_texmfdir}/doc/man/man1/mktextfm.man1.pdf
+%doc %{_texmfdistdir}/doc/man/man1/mktextfm.man1.pdf
 %doc %{_mandir}/man1/texhash.1*
-%doc %{_texmfdir}/doc/man/man1/texhash.man1.pdf
-%doc %{_texmfdir}/doc/web2c/web2c.html
-%doc %{_texmfdir}/doc/web2c/web2c.pdf
+%doc %{_texmfdistdir}/doc/man/man1/texhash.man1.pdf
+%doc %{_texmfdistdir}/doc/web2c/web2c.html
+%doc %{_texmfdistdir}/doc/web2c/web2c.pdf
 
 #-----------------------------------------------------------------------
 %prep
@@ -128,52 +120,8 @@ perl -pi -e 's%^(TEXMFMAIN\s+= ).*%$1%{_texmfdir}%;'			  \
 
 %install
 mkdir -p %{buildroot}%{_datadir}
-cp -fpar texmf %{buildroot}%{_datadir}
+cp -fpar texmf-dist %{buildroot}%{_datadir}
 mkdir -p %{buildroot}%{_mandir}/man1
-mv %{buildroot}%{_texmfdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
+mv %{buildroot}%{_texmfdistdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
 mkdir -p %{buildroot}%{_infodir}
-mv %{buildroot}%{_texmfdir}/doc/info/*.info %{buildroot}%{_infodir}
-
-
-%changelog
-* Tue Aug 07 2012 Paulo Andrade <pcpa@mandriva.com.br> 20120314-3
-+ Revision: 812311
-- Update to latest release.
-
-* Mon Jun 11 2012 Paulo Andrade <pcpa@mandriva.com.br> 20120314-2
-+ Revision: 804861
-- Update to latest release.
-
-* Fri Apr 13 2012 Paulo Andrade <pcpa@mandriva.com.br> 20120314-1
-+ Revision: 790640
-- Update to latest release.
-
-* Wed Feb 08 2012 Paulo Andrade <pcpa@mandriva.com.br> 20100503-6
-+ Revision: 772106
-- Update to latest release.
-
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20100503-5
-+ Revision: 753038
-- Rebuild to reduce used resources
-
-* Mon Dec 26 2011 Paulo Andrade <pcpa@mandriva.com.br> 20100503-4
-+ Revision: 745272
-- texlive-kpathsea
-- texlive-kpathsea
-
-* Mon Dec 05 2011 Zé <ze@mandriva.org> 20100503-3
-+ Revision: 737788
-- add requires for restant scriplets
-- rpm isnt able to handle = in conflicts
-
-* Sun Nov 13 2011 Paulo Andrade <pcpa@mandriva.com.br> 20100503-2
-+ Revision: 730328
-- Use rename macro instead of mix of provides/conflicts/obsoletes
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20100503-1
-+ Revision: 718785
-- texlive-kpathsea
-- texlive-kpathsea
-- texlive-kpathsea
-- texlive-kpathsea
-
+mv %{buildroot}%{_texmfdistdir}/doc/info/*.info %{buildroot}%{_infodir}
