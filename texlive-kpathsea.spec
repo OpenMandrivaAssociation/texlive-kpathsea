@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-kpathsea
 Version:	20120314
-Release:	5
+Release:	6
 Summary:	Path searching library for TeX-related files
 Group:		Publishing
 URL:		http://tug.org/texlive
@@ -105,14 +105,14 @@ the TeX live sources.
 %prep
 %setup -c -a0 -a1
 
-perl -pi -e 's%^(TEXMFMAIN\s+= ).*%$1%{_texmfdir}%;'			  \
+perl -pi -e 's%^(TEXMFMAIN\s+= ).*%$1%{_texmfdistdir}%;'			  \
 	 -e 's%^(TEXMFDIST\s+= ).*%$1%{_texmfdistdir}%;'		  \
 	 -e 's%^(TEXMFLOCAL\s+= ).*%$1%{_texmflocaldir}%;'		  \
 	 -e 's%^(TEXMFSYSVAR\s+= ).*%$1%{_texmfvardir}%;'		  \
 	 -e 's%^(TEXMFSYSCONFIG\s+= ).*%$1%{_texmfconfdir}%;'		  \
 	 -e 's%^(TEXMFHOME\s+= ).*%$1\$HOME/texmf%;'			  \
-	 -e 's%^(TEXMFVAR\s+= ).*%$1\$HOME/.texlive2011/texmf-var%;'	  \
-	 -e 's%^(TEXMFCONFIG\s+= ).*%$1\$HOME/.texlive2011/texmf-config%;'\
+	 -e 's%^(TEXMFVAR\s+= ).*%$1\$HOME/.texlive2013/texmf-var%;'	  \
+	 -e 's%^(TEXMFCONFIG\s+= ).*%$1\$HOME/.texlive2013/texmf-config%;'\
 	 -e 's%^(OSFONTDIR\s+= ).*%$1%{_datadir}/fonts%;'		  \
 	texmf/web2c/texmf.cnf
 
