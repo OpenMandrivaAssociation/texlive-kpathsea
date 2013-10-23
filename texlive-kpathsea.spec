@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-kpathsea
 Version:	20120314
-Release:	7
+Release:	8
 Summary:	Path searching library for TeX-related files
 Group:		Publishing
 URL:		http://tug.org/texlive
@@ -114,7 +114,7 @@ perl -pi -e 's%^(TEXMFMAIN\s+= ).*%$1%{_texmfdistdir}%;'			  \
 	 -e 's%^(TEXMFVAR\s+= ).*%$1\$HOME/.texlive2013/texmf-var%;'	  \
 	 -e 's%^(TEXMFCONFIG\s+= ).*%$1\$HOME/.texlive2013/texmf-config%;'\
 	 -e 's%^(OSFONTDIR\s+= ).*%$1%{_datadir}/fonts%;'		  \
-	texmf/web2c/texmf.cnf
+	texmf-dist/web2c/texmf.cnf
 
 %build
 
