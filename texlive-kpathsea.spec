@@ -5,7 +5,7 @@
 # catalog-license lgpl
 # catalog-version undef
 Name:		texlive-kpathsea
-Version:	20171108
+Version:	20180115
 Release:	1
 Summary:	Path searching library for TeX-related files
 Group:		Publishing
