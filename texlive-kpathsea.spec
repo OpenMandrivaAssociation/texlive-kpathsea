@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-kpathsea
 Version:	20180331
-Release:	1
+Release:	2
 Summary:	Path searching library for TeX-related files
 Group:		Publishing
 URL:		http://tug.org/texlive
