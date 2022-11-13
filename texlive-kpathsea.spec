@@ -1,18 +1,12 @@
-# revision 34145
-# category TLCore
-# catalog-ctan undef
-# catalog-date 2012-03-14 12:38:42 +0100
-# catalog-license lgpl
-# catalog-version undef
 Name:		texlive-kpathsea
-Version:	20190331
+Version:	64475
 Release:	1
 Summary:	Path searching library for TeX-related files
 Group:		Publishing
 URL:		http://tug.org/texlive
 License:	LGPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/kpathsea.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/kpathsea.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/kpathsea.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/kpathsea.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -29,12 +23,12 @@ separately, but rather is released and maintained as part of
 the TeX live sources.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -70,40 +64,16 @@ the TeX live sources.
 %{_texmfdistdir}/web2c/viscii-t5.tcx
 %doc %{_texmfdistdir}/doc/info/dir
 %doc %{_infodir}/kpathsea.info*
-%doc %{_infodir}/tds.info*
 %doc %{_infodir}/web2c.info*
-%doc %{_texmfdistdir}/doc/kpathsea/kpathsea.html
-%doc %{_texmfdistdir}/doc/kpathsea/kpathsea.pdf
-%doc %{_mandir}/man1/kpseaccess.1*
-%doc %{_texmfdistdir}/doc/man/man1/kpseaccess.man1.pdf
-%doc %{_mandir}/man1/kpsereadlink.1*
-%doc %{_texmfdistdir}/doc/man/man1/kpsereadlink.man1.pdf
-%doc %{_mandir}/man1/kpsestat.1*
-%doc %{_texmfdistdir}/doc/man/man1/kpsestat.man1.pdf
-%doc %{_mandir}/man1/kpsewhich.1*
-%doc %{_texmfdistdir}/doc/man/man1/kpsewhich.man1.pdf
-%doc %{_mandir}/man1/mkocp.1*
-%doc %{_texmfdistdir}/doc/man/man1/mkocp.man1.pdf
-%doc %{_mandir}/man1/mkofm.1*
-%doc %{_texmfdistdir}/doc/man/man1/mkofm.man1.pdf
-%doc %{_mandir}/man1/mktexfmt.1*
-%doc %{_texmfdistdir}/doc/man/man1/mktexfmt.man1.pdf
-%doc %{_mandir}/man1/mktexlsr.1*
-%doc %{_texmfdistdir}/doc/man/man1/mktexlsr.man1.pdf
-%doc %{_mandir}/man1/mktexmf.1*
-%doc %{_texmfdistdir}/doc/man/man1/mktexmf.man1.pdf
-%doc %{_mandir}/man1/mktexpk.1*
-%doc %{_texmfdistdir}/doc/man/man1/mktexpk.man1.pdf
-%doc %{_mandir}/man1/mktextfm.1*
-%doc %{_texmfdistdir}/doc/man/man1/mktextfm.man1.pdf
-%doc %{_mandir}/man1/texhash.1*
-%doc %{_texmfdistdir}/doc/man/man1/texhash.man1.pdf
+%doc %{_texmfdistdir}/doc/kpathsea
+%doc %{_mandir}/man1/*.1*
+%doc %{_texmfdistdir}/doc/man/man1/*
 %doc %{_texmfdistdir}/doc/web2c/web2c.html
 %doc %{_texmfdistdir}/doc/web2c/web2c.pdf
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 perl -pi -e 's%^(TEXMFMAIN\s+= ).*%$1%{_texmfdistdir}%;'			  \
 	 -e 's%^(TEXMFDIST\s+= ).*%$1%{_texmfdistdir}%;'		  \
