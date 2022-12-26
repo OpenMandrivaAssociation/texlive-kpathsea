@@ -1,5 +1,5 @@
 Name:		texlive-kpathsea
-Version:	64475
+Version:	65309
 Release:	1
 Summary:	Path searching library for TeX-related files
 Group:		Publishing
