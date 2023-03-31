@@ -1,6 +1,6 @@
 Name:		texlive-kpathsea
 Version:	65309
-Release:	1
+Release:	2
 Summary:	Path searching library for TeX-related files
 Group:		Publishing
 URL:		http://tug.org/texlive
