@@ -1,6 +1,6 @@
 Name:		texlive-kpathsea
-Version:	65309
-Release:	2
+Version:	67318
+Release:	1
 Summary:	Path searching library for TeX-related files
 Group:		Publishing
 URL:		http://tug.org/texlive
@@ -70,6 +70,7 @@ fi
 %doc %{_texmfdistdir}/doc/man/man1/*
 %doc %{_texmfdistdir}/doc/web2c/web2c.html
 %doc %{_texmfdistdir}/doc/web2c/web2c.pdf
+%doc %{_texmfdistdir}/doc/web2c/NEWS
 
 #-----------------------------------------------------------------------
 %prep
@@ -83,6 +84,7 @@ perl -pi -e 's%^(TEXMFMAIN\s+= ).*%$1%{_texmfdistdir}%;'			  \
 	 -e 's%^(TEXMFHOME\s+= ).*%$1\$HOME/texmf%;'			  \
 	 -e 's%^(TEXMFVAR\s+= ).*%$1\$HOME/.texlive2013/texmf-var%;'	  \
 	 -e 's%^(TEXMFCONFIG\s+= ).*%$1\$HOME/.texlive2013/texmf-config%;'\
+	 -e 's%^(TEXMFROOT\s+= ).*%$1\%{_datadir}%;'\
 	 -e 's%^(OSFONTDIR\s+= ).*%$1%{_datadir}/fonts%;'		  \
 	texmf-dist/web2c/texmf.cnf
 
