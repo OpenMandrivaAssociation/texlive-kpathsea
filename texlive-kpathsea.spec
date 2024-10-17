@@ -3,7 +3,7 @@ Version:	71664
 Release:	1
 Summary:	Path searching library for TeX-related files
 Group:		Publishing
-URL:		http://tug.org/texlive
+URL:		https://tug.org/texlive
 License:	LGPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/kpathsea.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/kpathsea.doc.r%{version}.tar.xz
